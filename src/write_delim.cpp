@@ -149,6 +149,11 @@ void stream_delim(Stream& output, RObject x, int i, char delim, const std::strin
     }
     break;
   }
+  //case VECSXP: {
+    //RObject value = VECTOR_ELT(x, i);
+    //stream_delim(output, deparse1line(value, FALSE), delim, na);
+    //break;
+  //}
   default:
     Rcpp::stop("Don't know how to handle vector of type %s.",
       Rf_type2char(TYPEOF(x)));
