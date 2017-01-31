@@ -6,9 +6,9 @@
 \title{Parse factors}
 \usage{
 parse_factor(x, levels, ordered = FALSE, na = c("", "NA"),
-  locale = default_locale())
+  locale = default_locale(), include_na = FALSE)
 
-col_factor(levels, ordered = FALSE)
+col_factor(levels, ordered = FALSE, include_na = FALSE)
 }
 \arguments{
 \item{x}{Character vector of values to parse.}
