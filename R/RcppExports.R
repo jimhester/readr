@@ -13,6 +13,10 @@ utctime <- function(year, month, day, hour, min, sec, psec) {
     .Call(`_readr_utctime`, year, month, day, hour, min, sec, psec)
 }
 
+read_trip_fare <- function(filename) {
+    .Call(`_readr_read_trip_fare`, filename)
+}
+
 dim_tokens_ <- function(sourceSpec, tokenizerSpec) {
     .Call(`_readr_dim_tokens_`, sourceSpec, tokenizerSpec)
 }

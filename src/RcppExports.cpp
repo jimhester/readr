@@ -46,6 +46,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// read_trip_fare
+List read_trip_fare(std::string filename);
+RcppExport SEXP _readr_read_trip_fare(SEXP filenameSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::string >::type filename(filenameSEXP);
+    rcpp_result_gen = Rcpp::wrap(read_trip_fare(filename));
+    return rcpp_result_gen;
+END_RCPP
+}
 // dim_tokens_
 IntegerVector dim_tokens_(List sourceSpec, List tokenizerSpec);
 RcppExport SEXP _readr_dim_tokens_(SEXP sourceSpecSEXP, SEXP tokenizerSpecSEXP) {
@@ -320,6 +331,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_readr_collectorGuess", (DL_FUNC) &_readr_collectorGuess, 2},
     {"_readr_read_connection_", (DL_FUNC) &_readr_read_connection_, 2},
     {"_readr_utctime", (DL_FUNC) &_readr_utctime, 7},
+    {"_readr_read_trip_fare", (DL_FUNC) &_readr_read_trip_fare, 1},
     {"_readr_dim_tokens_", (DL_FUNC) &_readr_dim_tokens_, 2},
     {"_readr_count_fields_", (DL_FUNC) &_readr_count_fields_, 3},
     {"_readr_guess_header_", (DL_FUNC) &_readr_guess_header_, 3},
